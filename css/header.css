@@ -152,9 +152,7 @@
     display: none;
 }
 
-.nav-item:hover {
-    background-color: #034478;
-}
+
 
 .hamburger {
     display: none;
@@ -324,6 +322,10 @@
         background-color: #034478;
         color: #fff;
         transition: 1s;
+    }
+    .nav-item:hover {
+        background-color: #034478;
+        transition: 0.5s;
     }
 
 
