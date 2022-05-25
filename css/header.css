@@ -1,0 +1,330 @@
+@property --angle {
+    syntax: '<angle>';
+    initial-value: 90deg;
+    inherits: true;
+}
+
+@property --gradX {
+    syntax: '<percentage>';
+    initial-value: 50%;
+    inherits: true;
+}
+
+@property --gradY {
+    syntax: '<percentage>';
+    initial-value: 0%;
+    inherits: true;
+}
+
+:root {
+    --d: 2500ms;
+    --angle: 90deg;
+    --gradX: 100%;
+    --gradY: 50%;
+    --c1: rgba(168, 239, 255, 1);
+    --c2: rgba(168, 239, 255, 0.1);
+}
+
+.wrapper {
+    min-width: min(40rem, 100%);
+}
+
+.box {
+    border: 2px solid;
+    border-image: conic-gradient(from var(--angle), var(--c2), var(--c1) 0.1turn, var(--c1) 0.15turn, var(--c2) 0.25turn) 30;
+    animation: borderRotate var(--d) linear infinite forwards;
+}
+
+.box:nth-child(2) {
+    border-image: radial-gradient(ellipse at var(--gradX) var(--gradY), var(--c1), var(--c1) 10%, var(--c2) 40%) 30;
+    animation: borderRadial var(--d) linear infinite forwards;
+}
+
+@keyframes borderRotate {
+    100% {
+        --angle: 420deg;
+    }
+}
+
+@keyframes borderRadial {
+    20% {
+        --gradX: 100%;
+        --gradY: 50%;
+    }
+
+    40% {
+        --gradX: 100%;
+        --gradY: 100%;
+    }
+
+    60% {
+        --gradX: 50%;
+        --gradY: 100%;
+    }
+
+    80% {
+        --gradX: 0%;
+        --gradY: 50%;
+    }
+
+    100% {
+        --gradX: 50%;
+        --gradY: 0%;
+    }
+}
+
+.nav-header {
+    background: rgb(55, 59, 68);
+    background: linear-gradient(90deg, rgba(55, 59, 68, 1) 0%, rgba(76, 161, 175, 1) 0%, rgba(36, 59, 85, 1) 100%);
+}
+
+.nav-bar {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 0;
+
+}
+
+.nav-logo a {
+    font-family: 'Macondo', cursive;
+    font-size: 30px;
+    text-decoration: none;
+    color: #fff;
+}
+
+.nav-logo strong {
+    font-size: 40px;
+}
+
+.nav-list {
+    display: flex;
+    justify-content: space-between;
+}
+
+.nav-list a {
+    text-decoration: none;
+    color: #fff;
+    margin: 0 20px;
+}
+
+.nav-list input[type=text] {
+    padding: 10px;
+    border: none;
+    float: left;
+    background: #f1f1f1;
+    border-radius: 6px;
+    background-color: #fff;
+    font-family: 'Roboto Slab', serif;
+}
+
+.nav-list button {
+    float: left;
+    padding: 11px;
+    background: #0c0c0c;
+    color: white;
+    border: 1px solid grey;
+    border-left: none;
+    cursor: pointer;
+    margin-left: 3px;
+    border-radius: 6px;
+}
+
+.nav-list button:hover {
+    background: #034478;
+    transition: 1s;
+    color: #fff;
+}
+
+.nav-list::after {
+    content: "";
+    clear: both;
+    display: table;
+}
+
+.nav-list .nav-item i::after {
+    content: "";
+    padding-left: 12px;
+}
+
+.nav-search-input {
+    display: none;
+}
+
+.nav-item:hover {
+    background-color: #034478;
+}
+
+.hamburger {
+    display: none;
+    cursor: pointer;
+}
+
+.bar {
+    width: 25px;
+    height: 3px;
+    margin: 5px auto;
+    -webkit-transition: all 0.3s ease-in-out;
+    transition: all 0.3 ease in out;
+    background-color: #ffffff;
+    display: block;
+}
+
+/* Tablet-Responsive--------------------------------------------------------------------------------- */
+@media(min-width:768px)and (max-width:1024px) {
+    .nav-header {
+        width: 100%;
+    }
+
+    .container {
+        width: 90%;
+    }
+
+    .nav-item-search {
+        display: none;
+    }
+
+    .nav-search-input {
+        display: block;
+        display: flex;
+        justify-content: flex-end;
+        margin: 15px 0;
+
+    }
+
+    .nav-search-input li {
+        list-style-type: none;
+    }
+
+    .nav-search-input li input[type=text],
+    .nav-search-input li button {
+        padding: 10px 10px;
+        border-radius: 10px;
+        background-color: #fff;
+        border: 1px solid #c6c0c0;
+        color: #000;
+        font-family: 'Roboto Slab', serif;
+
+    }
+
+    .nav-search-input li button {
+        background-color: #000;
+        color: #fff;
+    }
+
+    .nav-search-input li button:hover {
+        background-color: #034478;
+        color: #fff;
+        transition: 1s;
+    }
+}
+
+@media only screen and (max-width:767px) {
+    .container {
+        width: 90%;
+    }
+
+    .nav-bar {
+        padding: 10px 0;
+    }
+
+    .nav-logo a {
+        font-size: 20px;
+    }
+
+    .nav-logo strong {
+        font-size: 20px;
+    }
+
+    .nav {
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+        z-index: 9000;
+    }
+
+    .hamburger {
+        display: block;
+    }
+
+    .hamburger.active .bar:nth-child(2) {
+        opacity: 0;
+    }
+
+    .hamburger.active .bar:nth-child(1) {
+        transform: translateY(8px)rotate(45deg);
+    }
+
+    .hamburger.active .bar:nth-child(3) {
+        transform: translateY(-8px)rotate(-45deg);
+    }
+
+    .nav-bar .nav-list {
+        position: fixed;
+        top: -100%;
+        gap: 0;
+        flex-direction: column;
+        background-color: #123e52;
+        width: 100%;
+        transition: 0.3s;
+        opacity: 0.8;
+        margin-top: 60px;
+        left: 0;
+    }
+
+    .nav-list a {
+        font-size: 3vw;
+    }
+
+    .nav-item-search {
+        display: none;
+    }
+
+    .nav-item {
+        padding: 10px 0;
+        border-bottom: 1px solid #ffffff;
+
+    }
+
+    .nav-bar .nav-list.active {
+        left: 0;
+        top: 0;
+    }
+
+    .nav-search-input {
+        display: block;
+        display: flex;
+        justify-content: flex-end;
+        margin-top: 20%;
+    }
+
+    .nav-search-input li {
+        list-style-type: none;
+    }
+
+    .nav-search-input li input[type=text],
+    .nav-search-input li button {
+        padding: 5px 10px;
+        border-radius: 6px;
+        background-color: #fff;
+        border: 1px solid #c6c0c0;
+        color: #000;
+        font-family: 'Roboto Slab', serif;
+        font-size: 2.7vw;
+    }
+
+    .nav-search-input li button {
+        background-color: #000;
+        color: #fff;
+    }
+
+    .nav-search-input li button:hover {
+        background-color: #034478;
+        color: #fff;
+        transition: 1s;
+    }
+
+
+}
