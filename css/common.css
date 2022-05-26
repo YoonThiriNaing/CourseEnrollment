@@ -23,3 +23,20 @@ h5 {
     font-family: 'Roboto Slab', serif;
     font-weight: 400;
 }
+ul.breadcrumb{
+    display: flex;
+    margin-top: 30px;
+    font-family: 'Roboto Slab', serif;
+}
+ul.breadcrumb li a{
+    text-decoration: none;
+    color: #000;
+}
+ul.breadcrumb li+li:before {
+    padding: 8px;
+    color: black;
+    content: "> ";
+}
+.breadcrumb-li{
+   color: rgb(13, 77, 160);
+}

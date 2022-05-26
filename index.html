@@ -11,7 +11,7 @@
 </head>
 
 <body>
-    <section class="nav">
+    <nav class="nav">
         <div class="nav-header">
             <div class="container">
                 <div class="nav-bar">
@@ -22,9 +22,27 @@
                     </div>
                     <div class="nav-menu">
                         <ul class="nav-list">
-                            <li class="nav-item-search">
-                                <input type="text" placeholder="Search.." name="search2">
-                                <button type="submit"><i class="fa fa-search"></i></button>
+                            <li class="nav-items">
+                                <form action="" class="search">
+                                    <input class="search__input" type="search" placeholder="Search for courses"
+                                        id="searchInput">
+
+                                    <div class="search__icon-container">
+                                        <label for="searchInput" class="search__label" aria-label="Search">
+                                            <svg viewBox="0 0 1000 1000" title="Search">
+                                                <path fill="currentColor"
+                                                    d="M408 745a337 337 0 1 0 0-674 337 337 0 0 0 0 674zm239-19a396 396 0 0 1-239 80 398 398 0 1 1 319-159l247 248a56 56 0 0 1 0 79 56 56 0 0 1-79 0L647 726z" />
+                                            </svg>
+                                        </label>
+
+                                        <button class="search__submit" aria-label="Search">
+                                            <svg viewBox="0 0 1000 1000" title="Search">
+                                                <path fill="currentColor"
+                                                    d="M408 745a337 337 0 1 0 0-674 337 337 0 0 0 0 674zm239-19a396 396 0 0 1-239 80 398 398 0 1 1 319-159l247 248a56 56 0 0 1 0 79 56 56 0 0 1-79 0L647 726z" />
+                                            </svg>
+                                        </button>
+                                    </div>
+                                </form>
                             </li>
                             <li class="nav-item">
                                 <a href="#" class="nav-a"><i class="fa-solid fa-globe"></i>MY</a>
@@ -49,24 +67,86 @@
                 </div>
             </div>
         </div>
-    </section>
+    </nav>
     <section class="breadcrumbs clearfix">
         <div class="container">
-            <div class="nav-search-input">
-                <li class="nav-item-searchs">
-                    <input type="text" placeholder="Search.." name="search2">
-                    <button type="submit"><i class="fa fa-search"></i></button>
-                </li>
+            <ul class="breadcrumb">
+                <li><a href="index.html">Home</a></li>
+                <li class="breadcrumb-li">Courses</li>
+            </ul>
+        </div>
+    </section>
+    <section class="main-visual">
+        <div class="container">
+            <div class="main-courses">
+                <div class="courses-menu">
+                    <a href="" class="noselect">Computer Science</a>
+                    <a href="" class="noselect">Computer Science</a>
+                    <a href="" class="noselect">Computer Science</a>
+                    <a href="" class="noselect">Computer Science</a>
+                </div>
+                <div class="courses-menu">
+                    <a href="" class="noselect">Computer Science</a>
+                    <a href="" class="noselect">Computer Science</a>
+                    <a href="" class="noselect">Computer Science</a>
+                    <a href="" class="noselect">Computer Science</a>
+                </div>
+                <div class="courses-menu">
+                    <a href="" class="noselect">Computer Science</a>
+                    <a href="" class="noselect">Computer Science</a>
+                    <a href="" class="noselect">Computer Science</a>
+                    <a href="" class="noselect">Computer Science</a>
+                </div>
+                <div class="courses-menu">
+                    <a href="" class="noselect">Computer Science</a>
+                    <a href="" class="noselect">Computer Science</a>
+                    <a href="" class="noselect">Computer Science</a>
+                    <a href="" class="noselect">Computer Science</a>
+                </div>
+            </div>
+            <div class="course-orginize">
+                <div class="img">
+                    <img src="img/courses_01.png" alt="">
+                </div>
+                <div class="course-paragraph">
+                    <h2>Organize Your Courses to Grow, Learn, And Prosper</h2>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sequi molestiae doloribus repudiandae!
+                        Suscipit inventore maiores facere possimus rem repudiandae iusto minima, repellendus quidem quam
+                        voluptatibus eum labore eius nihil a.</p>
+
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Minus asperiores qui facilis eum, totam
+                        placeat nemo officiis quos dolor debitis! Corrupti, magni. Inventore minima accusantium deserunt
+                        saepe libero iusto earum!</p>
+                </div>
+            </div>
+            <div class="course-topics">
+                <div class="course-tab">
+                    <h2>Popular Course Topics</h2>
+                    <a href=""><i class="fa-solid fa-magnifying-glass"></i>Marketing</a>
+                    <a href=""><i class="fa-solid fa-magnifying-glass"></i>Marketing</a>
+                    <a href=""><i class="fa-solid fa-magnifying-glass"></i>Marketing</a>
+                    <a href=""><i class="fa-solid fa-magnifying-glass"></i>Marketing</a>
+                    <a href=""><i class="fa-solid fa-magnifying-glass"></i>Marketing</a>
+                    <a href=""><i class="fa-solid fa-magnifying-glass"></i>Marketing</a>
+                    <a href=""><i class="fa-solid fa-magnifying-glass"></i>Marketing</a>
+                    <a href=""><i class="fa-solid fa-magnifying-glass"></i>Marketing</a>
+                </div>
+                <div class="course-img">
+                    <img src="img/courses.jpg" alt="">
+                </div>
             </div>
         </div>
     </section>
-    <section class="footer">
+    <footer class="footer">
         <div class="container">
             <div class="footer-nav">
                 <span>Subscribe to our News</span>
                 <div class="search-input">
-                    <input type="search" placeholder="Enter Your email">
-                    <input type="submit" placeholder="Submit">
+                    <form>
+                        <i class="fa-solid fa-envelope"></i>
+                        <input type="search" placeholder="Enter your email....">
+                        <button type="submit">Subscribe</button>
+                    </form>
                 </div>
             </div>
             <div class="footer-menu">
@@ -101,7 +181,7 @@
                 <h4>CopyRight@All Rights Reserved</h4>
             </div>
         </div>
-    </section>
+    </footer>
     <script src="js/jquery.min.js"></script>
     <script src="js/custom.js"></script>
 </body>

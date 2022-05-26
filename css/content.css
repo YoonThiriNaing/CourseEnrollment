@@ -1,0 +1,213 @@
+.main-courses {
+    width: 100%;
+    margin-top: 30px;
+    border-bottom: 1px solid #4ca1af;
+    padding-bottom: 30px;
+
+}
+
+.courses-menu {
+    width: 100%;
+    display: flex;
+    margin: 0 auto;
+}
+
+.courses-menu a {
+    text-align: center;
+    display: block;
+    text-decoration: none;
+    color: #4ca1af;
+    width: 23%;
+    padding: 20px 30px;
+    border-radius: 15px;
+    margin: 20px 20px;
+    font-family: 'Roboto Slab', serif;
+    font-size: 20px;
+    /* background-color: #4ca1af; */
+    text-transform: uppercase;
+    border: 2px solid #4ca1af;
+    font-weight: bold;
+}
+
+.noselect {
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    -webkit-tap-highlight-color: transparent;
+}
+
+.noselect:after {
+    content: '';
+    position: absolute;
+    transform: translateX(-55px) translateY(-40px);
+    width: 25px;
+    height: 25px;
+    border-radius: 50%;
+    background: transparent;
+    box-shadow: 0px 0px 50px transparent;
+    transition: 500ms;
+}
+
+.noselect:hover {
+    transform: translateY(-5px);
+    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.4);
+    transition: 1s;
+}
+
+.noselect:hover:after {
+    background: white;
+    box-shadow: 0px 0px 20px #67bdf3, 0px 0px 30px #0c7795, inset 0px 0px 10px #31cdd8;
+    animation: spin 1s infinite linear;
+}
+
+@keyframes spin {
+    25% {
+        transform: translateX(-25px) translateY(-35px);
+        width: 15px;
+        height: 15px;
+    }
+
+    50% {
+        transform: translateX(-55px) translateY(-30px);
+        width: 5px;
+        height: 5px;
+    }
+
+    75% {
+        transform: translateX(-85px) translateY(-35px);
+        width: 15px;
+        height: 15px;
+    }
+}
+
+.noselect:focus {
+    outline: none;
+}
+
+.course-orginize {
+    width: 100%;
+    display: flex;
+    margin-top: 60px;
+    border-bottom: 1px solid #4ca1af;
+    padding-bottom: 30px;
+}
+
+.course-orginize h2 {
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.img img {
+    width: 100%;
+    border-radius: 15px;
+    height: auto;
+}
+
+.course-paragraph {
+    width: 100%;
+    margin-left: 20px;
+}
+
+.course-paragraph p {
+    margin: 10px 0;
+    font-size: 17px;
+    text-align: justify;
+}
+
+.course-topics {
+    margin-top: 60px;
+    display: flex;
+    width: 100%;
+    padding-bottom: 25px;
+    border-radius: 15px;
+    box-shadow: 1px 1px 11px 7px rgba(167, 149, 212, 0.51);
+    -webkit-box-shadow: 1px 1px 11px 7px rgba(167, 149, 212, 0.51);
+    -moz-box-shadow: 1px 1px 11px 7px rgba(167, 149, 212, 0.51);
+}
+
+.course-topics .course-tab {
+    width: 100%;
+}
+
+.course-tab a {
+    text-decoration: none;
+    color: #0c7795;
+    padding: 10px 20px;
+    border-radius: 10px;
+    border: 2px solid #0c7795;
+    margin-top: 40px;
+    width: 25%;
+    margin: 20px 20px;
+    display: inline-block;
+    font-size: 17px;
+    font-weight: bold;
+}
+
+.course-tab a:hover {
+    background: rgb(55, 59, 68);
+    background: linear-gradient(90deg, rgba(55, 59, 68, 1) 0%, rgba(76, 161, 175, 1) 0%, rgba(36, 59, 85, 1) 100%);
+    color: #fff;
+    transition: 0.8s;
+    border: none;
+}
+
+.course-tab i::after {
+    content: "";
+    padding-left: 10px;
+}
+
+.course-topics .course-img img {
+    width: 80%;
+    margin-top: 30px;
+    border-radius: 50%;
+}
+
+.course-tab h2 {
+    font-size: 20px;
+    display: block;
+    padding-left: 30px;
+    font-weight: bold;
+    margin-top: 30px;
+    color: #0c7795;
+}
+
+/* Responsive Tablet-------------------------------------------------------------------------------- */
+@media(min-width:768px) and (max-width:1024px) {
+    .course-tab a {
+        font-size: 14px;
+    }
+}
+
+/* Responsive Mobile---------------------------------------------------------------------------------- */
+@media only screen and (max-width:767px) {
+    .courses-menu {
+        display: block;
+    }
+
+    .courses-menu a {
+        width: 100%;
+        margin: 20px 0;
+        font-size: 4vw;
+    }
+
+    .course-orginize {
+        display: block;
+    }
+
+    .course-paragraph {
+        margin-left: 0;
+    }
+
+    .course-tab a {
+        width: 90%;
+        margin: 20px 17px;
+        font-size: 3.5vw;
+    }
+
+    .course-topics .course-img img {
+        display: none;
+    }
+}
