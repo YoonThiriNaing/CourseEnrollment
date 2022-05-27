@@ -263,8 +263,160 @@
     color: #000;
 }
 
+/* Enroll form------------------------------------------------------------------------------------- */
+.enroll-background {
+    background-image: linear-gradient(to top, #4ca1af, #43879a, #3c6d83, #35556a, #2c3e50);
+    padding-bottom: 60px;
+    padding-top: 60px;
+
+}
+
+.enroll-form {
+    width: 100%;
+    background-color: #35556a;
+    box-shadow: rgba(255, 255, 255, 0.1) 0px 1px 1px 0px inset, rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px;
+    border-radius: 20px;
+    padding-bottom: 10px;
+    overflow: hidden;
+
+}
+
+.enroll-form h2 {
+    font-size: 25px;
+    color: #8597a3;
+    padding: 10px 15px;
+    background-color: rgb(36 59 85);
+    font-family: 'Roboto Slab', serif;
+}
+
+.enroll-form h2 {
+    color: white;
+    -webkit-animation: h2 0.5s infinite;
+    animation: h2 0.5s infinite;
+}
+
+@-webkit-keyframes h2 {
+    0% {
+        text-shadow: 0 0 6px #FFF;
+    }
+
+    100% {
+        text-shadow: 0 0 0px rgb(9, 9, 9);
+    }
+}
+
+@keyframes h2 {
+    0% {
+        text-shadow: 0 0 6px #FFF;
+    }
+
+    100% {
+        text-shadow: 0 0 0px rgb(7, 7, 7);
+    }
+}
+
+.enroll-form form {
+    width: 90%;
+    margin: 0 auto;
+}
+
+.enroll-form form div.row {
+    display: flex;
+    flex-direction: column-reverse;
+    position: relative;
+    padding-top: 1.5rem;
+    margin: 30px 0;
+}
+
+.input+.input {
+    margin-top: 1.5rem;
+}
+
+.input-label {
+    color: #8597a3;
+    position: absolute;
+    top: 0.5rem;
+    transition: 0.25s ease;
+}
+
+.input-field {
+    border: 0;
+    z-index: 1;
+    background-color: transparent;
+    border-bottom: 1px solid rgb(182, 169, 169);
+    font: inherit;
+    font-size: 1.125rem;
+    padding: 0.25rem 0;
+}
+
+.input-field:focus,
+.input-field:valid {
+    outline: 0;
+    border-bottom-color: #ffffff;
+    color: #fff;
+}
+
+.input-field:focus+.input-label,
+.input-field:valid+.input-label+textarea {
+    color: #ffffff;
+    transform: translateY(-1.5rem);
+}
+
+.enroll-form input[type=date] {
+    background: transparent;
+    color: #8597a3;
+}
+
+.enroll-form .row-btn {
+    width: 100%;
+    display: flex;
+}
+
+.enroll-form .row-btn input[type=submit] {
+    width: 100%;
+    padding: 15px 10px;
+    border-radius: 10px;
+    border: none;
+    margin: 30px 10px;
+    font-family: 'Roboto Slab', serif;
+}
+
+.enroll-form .row-btn input[type=submit]:nth-child(1) {
+    font-size: 17px;
+}
+
+.enroll-form .row-btn input[type=submit]:nth-child(1):hover {
+    background-color: rgb(102, 119, 122);
+    transition: 1s;
+    color: #fff;
+}
+
+.enroll-form .row-btn input[type=submit]:nth-child(2) {
+    background-color: rgb(36 59 85);
+    color: #fff;
+    font-size: 17px;
+}
+
+.enroll-form .row-btn input[type=submit]:nth-child(2):hover {
+    background-color: rgb(76 161 175);
+    transition: 1s;
+}
+
+input::placeholder,
+textarea {
+    color: #B3BEB9;
+}
+
+select:required:invalid {
+    color: #B3BEB9;
+}
+
 /* Responsive Tablet-------------------------------------------------------------------------------- */
 @media(min-width:768px) and (max-width:1024px) {
+    body {
+        font-size: 18px;
+    }
+
     .course-tab a {
         font-size: 14px;
     }
@@ -284,6 +436,7 @@
     .card .box .content a {
         font-size: 17px;
     }
+
 }
 
 /* Responsive Mobile---------------------------------------------------------------------------------- */
@@ -342,5 +495,33 @@
         font-size: 3vw;
     }
 
+    .enroll-background {
+        padding-top: 30px;
+    }
+
+    .enroll-form h2 {
+        font-size: 4vw;
+    }
+
+    .input-field {
+        font-size: 3vw;
+    }
+
+    .input-label {
+        font-size: 3vw;
+    }
+
+    .enroll-form .row-btn {
+        margin-top: -30px;
+    }
+
+    .enroll-form .row-btn input[type=submit] {
+        padding: 10px 10px;
+    }
+
+    .enroll-form .row-btn input[type=submit]:nth-child(1),
+    .enroll-form .row-btn input[type=submit]:nth-child(2) {
+        font-size: 3vw;
+    }
 
 }
