@@ -72,117 +72,51 @@
         <div class="container">
             <ul class="breadcrumb">
                 <li><a href="index.html">Home</a></li>
-                <li class="breadcrumb-li">Student-Register</li>
+                <li class="breadcrumb-li">Contact</li>
             </ul>
         </div>
     </section>
     <section class="main-visual">
         <div class="enroll-background">
             <div class="container">
-                <div class="stu-reg">
-                    <div class="stu-reg-div">
-                        <div class="stu-left">
-                            <div class="gradient">
-                                <h3>Student Register Form</h3>
-                                <i class="fa-solid fa-graduation-cap"></i>
-                                <i class="fa-solid fa-diploma"></i>
-                                <h3>Register Here!</h3>
-                            </div>
-                            <div class="patterns">
-                                <svg width="100%" height="100%">
-                                    <defs>
-                                        <pattern id="polka-dots" x="0" y="0" width="100" height="100"
-                                            patternUnits="userSpaceOnUse">
-                                            <circle fill="#be9ddf" cx="25" cy="25" r="3"></circle>
-                                        </pattern>
-                                        <style>
-                                            @import url("https://fonts.googleapis.com/css?  family=Lora:400,400i,700,700i");
-                                        </style>
-
-                                    </defs>
-                                    <text x="50%" y="60%" text-anchor="middle">
-                                        Welcome!
-                                    </text>
-                                </svg>
-                            </div>
+            <div class="contact">
+                <div class="contact-box">
+                    <div class="contact-links">
+                      <h2>CONTACT</h2>
+                      <div class="links">
+                        <div class="link">
+                          <a><img src="img/linkedin_01.webp" alt="linkedin"></a>
                         </div>
+                        <div class="link">
+                          <a><img src="img/github_02.png" alt="github"></a>
+                        </div>
+                        <div class="link">
+                          <a><img src="img/facebook.webp" alt="codepen"></a>
+                        </div>
+                        <div class="link">
+                          <a><img src="img/instagram.webp" alt="email"></a>
+                        </div>
+                      </div>
                     </div>
-                    <div class="stu-right">
-                        <h3>General Information</h3>
-                        <form action="">
-                            <div class="row">
-                                <div class="name">
-                                    <input type="text" placeholder="First name" name="f-name" id="f-name" required>
-                                    <label for="f-name"><b>First name</b></label>
-                                </div>
-                                <div class="name">
-                                    <input type="text" placeholder="Middle name" name="f-name" id="f-name" required>
-                                    <label for="f-name"><b>Middle name</b></label>
-                                </div>
-                                <div class="name">
-                                    <input type="text" placeholder="Last name" name="f-name" id="f-name" required>
-                                    <label for="f-name"><b>Last name</b></label>
-                                </div>
-                            </div>
-                            <div class="row">
-                                <div class="name">
-                                    <input type="text" placeholder="Email" name="email" id="email" required>
-                                    <label for="email"><b>Email</b></label>
-                                </div>
-                                <div class="name">
-                                    <input type="tel" placeholder="Phone Number" name="dob" id="phno" required>
-                                    <label for="phno"><b>Phone Number</b></label>
-                                </div>
-                            </div>
-                            <div class="row">
-                                <div class="name">
-                                    <select name="gender">
-                                        <option value="none" selected>Gender</option>
-                                        <option value="male">Male</option>
-                                        <option value="female">Female</option>
-                                        <option value="other">other</option>
-                                    </select>
-                                    <span class="custom-arrow"></span>
-                                    <label for="gender"><b>Select you gender</b></label>
-                                </div>
-                                <div class="name">
-                                    <input type="date" placeholder="DOB" name="dob" id="dob" required value="">
-                                    <label for="dob"><b>Date Of Birth</b></label>
-                                </div>
-                            </div>
-                            <div class="row">
-                                <div class="name">
-                                    <input type="text" placeholder="Student-ID" name="email" id="email" required>
-                                    <label for="email"><b>Student-ID</b></label>
-                                </div>
-                                <div class="name">
-                                    <input type="tel" placeholder="Entry Year" name="dob" id="phno" required>
-                                    <label for="phno"><b>Entry year</b></label>
-                                </div>
-                            </div>
-                            <div class="row">
-                                <div class="name">
-                                    <input type="text" placeholder="Grade" name="email" id="email" required>
-                                    <label for="email"><b>Grade</b></label>
-                                </div>
-                                <div class="name">
-                                    <select name="gender">
-                                        <option value="none" selected>Semester</option>
-                                        <option value="male">Male</option>
-                                        <option value="female">Female</option>
-                                        <option value="other">other</option>
-                                    </select>
-                                    <span class="custom-arrow"></span>
-                                    <label for="gender"><b>Semester</b></label>
-                                </div>
-                            </div>
-                            <div class="row-btn">
-                                <input type="submit" value="Cancel">
-                                <input type="submit" value="Register">
-                            </div>
-                        </form>
+                    <div class="contact-form-wrapper">
+                      <form>
+                        <div class="form-item">
+                          <input type="text" name="sender" required>
+                          <label>Name:</label>
+                        </div>
+                        <div class="form-item">
+                          <input type="text" name="email" required>
+                          <label>Email:</label>
+                        </div>
+                        <div class="form-item">
+                          <textarea class="" name="message" required></textarea>
+                          <label>Message:</label>
+                        </div>
+                        <button class="submit-btn">Send</button>  
+                      </form>
                     </div>
-                </div>
+                  </div>
+            </div>
             </div>
         </div>
 
