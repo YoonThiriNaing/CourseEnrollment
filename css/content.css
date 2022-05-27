@@ -411,6 +411,203 @@ select:required:invalid {
     color: #B3BEB9;
 }
 
+select,
+select option {
+    color: #B3BEB9;
+}
+
+input[type=date] {
+    color: #B3BEB9;
+}
+
+/* Student-register--------------------------------------------------------------------------------- */
+.stu-reg {
+    width: 100%;
+    display: flex;
+}
+
+.stu-reg-div {
+    width: 50%;
+    position: relative;
+}
+
+.stu-left {
+    position: absolute;
+    width: 90%;
+}
+
+.stu-left .gradient {
+    width: 100%;
+    background: linear-gradient(45deg, #0c7795, #35556a, rgb(55 59 68), #4ca1af, #35556a, #4ca1af);
+    background-size: 600% 100%;
+    animation: gradient 16s linear infinite;
+    animation-direction: alternate;
+    border-radius: 10px;
+    padding-bottom: 50px;
+}
+
+@keyframes gradient {
+    0% {
+        background-position: 0%
+    }
+
+    100% {
+        background-position: 100%
+    }
+
+}
+
+.stu-left .gradient h3 {
+    padding: 6px 0;
+    color: #fff;
+    font-size: 20px;
+    text-align: center;
+    display: block;
+
+}
+
+.stu-left .fa-graduation-cap {
+    color: #fff;
+    font-size: 200px;
+    text-align: center;
+    display: block;
+}
+
+svg text {
+    font-family: Lora;
+    letter-spacing: 10px;
+    stroke: #ffa5d8;
+    font-size: 65px;
+    font-weight: 700;
+    stroke-width: 3;
+
+    animation: textAnimate 5s infinite alternate;
+
+}
+
+@keyframes textAnimate {
+    0% {
+        stroke-dasharray: 0 50%;
+        stroke-dashoffset: 20%;
+        fill: hsl(189, 68%, 75%)
+    }
+
+    100% {
+        stroke-dasharray: 50% 0;
+        stroke-dashoffstet: -20%;
+        fill: hsla(189, 68%, 75%, 0%)
+    }
+
+}
+
+.stu-right {
+    width: 100%;
+    padding-bottom: 40px;
+    box-shadow: rgba(255, 255, 255, 0.1) 0px 1px 1px 0px inset, rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px;
+    border-radius: 15px;
+}
+
+.stu-right h3 {
+    font-size: 17px;
+    color: #fff;
+    font-weight: bold;
+    padding: 20px 20px;
+    border-bottom: 1px solid rgb(146, 139, 139);
+}
+
+.stu-right form {
+    padding: 10px 12px;
+}
+
+.stu-right div.row {
+    display: flex;
+    margin: 20px 0;
+}
+
+.stu-right div.name {
+    margin: 0 10px;
+    flex: 1;
+    position: relative;
+}
+
+.custom-arrow {
+    position: absolute;
+    top: 0;
+    right: 0;
+    display: block;
+    width: 30px;
+    height: 100%;
+    pointer-events: none;
+}
+
+.custom-arrow::before,
+.custom-arrow::after {
+    content: "";
+    position: absolute;
+    width: 0;
+    height: 0;
+    top: 30%;
+}
+
+.custom-arrow::before {
+    border-left: 5px solid transparent;
+    border-right: 5px solid transparent;
+    border-top: 5px solid #000000;
+}
+
+.stu-right div.name label {
+    text-align: center;
+    display: block;
+    color: #fff;
+    font-size: 14px;
+}
+
+.stu-right input[type=text],
+.stu-right input[type=tel],
+.stu-right select,
+.stu-right input[type=date] {
+    padding: 10px 10px;
+    border-radius: 10px;
+    border: none;
+    width: 100%;
+    font-size: 14px;
+    font-family: 'Roboto Slab', serif;
+    appearance: none;
+}
+
+.stu-right .row-btn {
+    display: flex;
+}
+
+.stu-right input[type=submit] {
+    padding: 10px 10px;
+    border-radius: 10px;
+    border: none;
+    width: 100%;
+    margin: 0 10px;
+}
+
+.stu-right .row-btn input[type=submit]:nth-child(1) {
+    font-size: 17px;
+}
+
+.stu-right .row-btn input[type=submit]:nth-child(1):hover {
+    background-color: rgb(102, 119, 122);
+    transition: 1s;
+    color: #fff;
+}
+
+.stu-right .row-btn input[type=submit]:nth-child(2) {
+    background-color: rgb(36 59 85);
+    color: #fff;
+    font-size: 17px;
+}
+
+.stu-right .row-btn input[type=submit]:nth-child(2):hover {
+    background-color: rgb(76 161 175);
+    transition: 1s;
+}
+
 /* Responsive Tablet-------------------------------------------------------------------------------- */
 @media(min-width:768px) and (max-width:1024px) {
     body {
@@ -435,6 +632,23 @@ select:required:invalid {
 
     .card .box .content a {
         font-size: 17px;
+    }
+
+    .stu-reg {
+        display: block;
+    }
+
+    .stu-reg-div {
+        width: 100%;
+    }
+
+    .stu-left {
+        position: unset;
+        width: 100%;
+    }
+
+    .gradient {
+        display: none
     }
 
 }
@@ -522,6 +736,56 @@ select:required:invalid {
     .enroll-form .row-btn input[type=submit]:nth-child(1),
     .enroll-form .row-btn input[type=submit]:nth-child(2) {
         font-size: 3vw;
+    }
+
+    .stu-reg-div {
+        display: none;
+    }
+
+    .stu-right h3 {
+        font-size: 4vw;
+        padding: 10px 20px;
+    }
+
+    .stu-right div.row {
+        display: block;
+        margin: 20px 0;
+    }
+
+    .stu-right div.name {
+        margin: 20px 0;
+    }
+
+    .stu-right input[type=text],
+    .stu-right input[type=tel],
+    .stu-right select,
+    .stu-right input[type=date] {
+        font-size: 3vw;
+        font-family: 'Roboto Slab', serif;
+    }
+
+    .stu-right div.name label {
+        font-size: 3vw;
+        display: none;
+    }
+
+    .stu-right .row-btn input[type=submit]:nth-child(1) {
+        font-size: 3vw;
+        padding: 10px 10px;
+    }
+
+    .stu-right .row-btn input[type=submit]:nth-child(2) {
+        font-size: 3vw;
+        padding: 10px 10px;
+    }
+
+    .custom-arrow::before,
+    .custom-arrow::after {
+        content: "";
+        position: absolute;
+        width: 0;
+        height: 0;
+        top: 50%;
     }
 
 }
