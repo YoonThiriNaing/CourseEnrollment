@@ -45,10 +45,148 @@ ul.breadcrumb li+li:before {
     color: rgb(13, 77, 160);
 }
 
+.sign-up {
+    background: url("../img/Sign-up\ –\ 3.png") no-repeat center center fixed;
+    background-size: cover;
+    height: 100vh;
+    width: 100vw;
+}
+
+.sign-up-container {
+    width: 1000px;
+    margin: 0 auto;
+    position: relative;
+    top: 0;
+    left: 0;
+}
+
+.sign-up-form {
+    width: 100%;
+    position: absolute;
+    top: 130px;
+    left: 0;
+    box-shadow: rgba(255, 255, 255, 0.1) 0px 1px 1px 0px inset, rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px;
+}
+
+.sign-up-form form {
+    width: 80%;
+    margin: 0 auto;
+}
+
+.sign-up-form h3 {
+    text-align: center;
+    font-size: 20px;
+    font-weight: bold;
+    padding: 15px 0;
+}
+
+.sign-up-form form label {
+    display: block;
+}
+
+.sign-up-form form div.row {
+    width: 100%;
+    margin: 30px 0;
+}
+
+.sign-up-form input[type=password],
+.sign-up-form input[type=text] {
+    width: 100%;
+    border: 0;
+    z-index: 1;
+    background-color: transparent;
+    border-bottom: 1px solid rgb(182, 169, 169);
+    font: inherit;
+    font-size: 15px;
+    font-family: 'Roboto Slab', serif;
+}
+
+.sign-up-form input[type=password]:focus,
+.sign-up-form input[type=text]:focus,
+.sign-up-form input[type=password]:valid,
+.sign-up-form input[type=text]:valid {
+    outline: 0;
+    border-bottom-color: rgb(182, 169, 169);
+    color: #000;
+    font-family: 'Roboto Slab', serif;
+}
+
+.sign-up-form .row-submit {
+    padding: 10px 0px;
+    border-radius: 10px;
+    border: none;
+    display: inline-block;
+    font-family: 'Roboto Slab', serif;
+    width: 100%;
+}
+
+.sign-up-form .row-submit input[type=submit] {
+    margin-top: 30px;
+    margin-left: 36%;
+}
+
+.sign-up-form input[type=submit]:nth-child(1) {
+    background-color: rgb(36 59 85);
+    color: #fff;
+    font-size: 15px;
+}
+
+.sign-up-form input[type=submit]:nth-child(1):hover {
+    background-color: rgb(76 161 175);
+    transition: 1s;
+}
+
+.social-media {
+    width: 100%;
+    background-color: rgb(36 59 85);
+    padding: 10px 0px;
+    margin-top: 25px;
+
+}
+
+.social-media .icon {
+    margin-left: 38%;
+}
+
+.social-media i {
+    color: #fff;
+    padding: 0 20px;
+}
+
+.span-row span {
+    width: 100%;
+    display: block;
+    text-align: center;
+    margin-top: 1%;
+}
+
+.span-row a {
+    text-decoration: none;
+    color: rgb(39, 184, 224);
+}
+
+.span-password {
+    width: 80%;
+    text-align: justify;
+    display: block;
+    margin: 0 auto;
+}
+
 /* Responsive Tablet------------------------------------------------------------------------------------- */
 @media(min-width:768px)and (max-width:1024px) {
     .breadcrumbs {
         font-size: 18px;
+    }
+
+    .sign-up {
+        background-image: url("../img/Sign-up\ –\ 2.png");
+        height: 100vh;
+        width: 100%;
+    }
+
+    .sign-up-container {
+        width: 60%;
+        margin: 0 auto;
     }
 }
 
@@ -56,5 +194,58 @@ ul.breadcrumb li+li:before {
     .breadcrumbs {
         margin-top: 70px;
         font-size: 3vw;
+    }
+
+    .sign-up {
+        background-image: url("../img/Sign-up\ –\ 1.png");
+        height: 100vh;
+        width: 100%;
+    }
+
+    .sign-up-container {
+        width: 70%;
+        margin: 0 auto;
+    }
+
+    .sign-up-form {
+        top: 40px;
+    }
+
+    .sign-up-form h3 {
+        font-size: 4vw;
+    }
+
+    .sign-up-form form input[type=text],
+    .sign-up-form form input[type=password] {
+        font-size: 3vw;
+    }
+
+    .sign-up-form input[type=submit]:nth-child(1) {
+        font-size: 3vw;
+        margin-left: 9%;
+    }
+
+    .social-media .icon {
+        margin-left: 9%;
+    }
+
+    .span-row span {
+        font-size: 2.7vw;
+    }
+
+    .span-row a {
+        font-size: 2.7vw;
+    }
+
+    .checkmark {
+        font-size: 2.5vw;
+    }
+
+    .span-password {
+        font-size: 3vw;
+    }
+
+    .sign-up-form .row-submit {
+        margin-left: 26%;
     }
 }
